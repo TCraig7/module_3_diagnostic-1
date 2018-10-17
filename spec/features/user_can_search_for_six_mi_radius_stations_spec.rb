@@ -18,7 +18,7 @@ feature "User can make a search" do
       expect(page).to have_css(".address")
       expect(page).to have_css(".fuel types")
       expect(page).to have_css(".distance")
-      expect(page).to have_css(".access_times")
+      expect(page).to have_css(".access times")
     end
     # And the stations should be limited to Electric and Propane
     # And for each of the stations I should see Name, Address, Fuel Types, Distance, and Access Times
