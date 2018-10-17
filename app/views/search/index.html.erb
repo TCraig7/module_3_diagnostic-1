@@ -4,7 +4,7 @@
 
 <div>
   <div class = "station">
-    <% @station_results["fuel_stations"][0..10].each do |station| %>
+    <% @stations_list.each do |station| %>
     <div class = "name">
       Station Name: <%= station["station_name"] %>
     </div>
