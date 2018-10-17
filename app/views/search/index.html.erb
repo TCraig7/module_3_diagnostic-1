@@ -1,24 +1,24 @@
 <h1> List of Stations </h1>
 
-<p> <%= @station_results.count %> Results </p>
+<p> <%= @station_results["station_counts"]["total"] %> Results </p>
 
 <div>
   <div class = "station">
-    <% @station_results.each do |station| %>
+    <% @station_results["fuel_stations"].each do |station| %>
     <div class = "name">
-      <%= station.name %>
+      <%= station["station_name"] %>
     </div>
     <div class = "address">
-      <%= station.name %>
+      <%= station["city"] %>
     </div>
     <div class = "fuel type">
-      <%= station.name %>
+      <%= station["fuel_type_code"] %>
     </div>
     <div class = "distance">
-      <%= station.name %>
+      <%= station["latitude"] %>
     </div>
     <div class = "access times">
-      <%= station.name %>
+      <%= station["access_days_time"] %>
     </div>
   </div>
 </div>
