@@ -4,12 +4,13 @@
 
 <div>
   <div class = "station">
-    <% @station_results["fuel_stations"].each do |station| %>
+    <% @station_results["fuel_stations"][0..10].each do |station| %>
     <div class = "name">
       Station Name: <%= station["station_name"] %>
     </div>
     <div class = "address">
-      City: <%= station["street_address"] station["city"] %>
+      Street: <%= station["street_address"] %>
+      City: <%= station["city"] %>
     </div>
     <div class = "fuel type">
       Fuel Type: <%= station["fuel_type_code"] %>
