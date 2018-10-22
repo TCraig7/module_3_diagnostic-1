@@ -1,27 +1,29 @@
 <h1> List of Stations </h1>
 
-<p> 10 Closest Stations </p>
+<p> <%= @station_facade.stations.count %> Results </p>
 
 <div>
   <div class = "station">
-    <% @stations_list.each do |station| %>
+    <% @station_facade.stations.each do |station| %>
     <div class = "name">
-      Station Name: <%= station["station_name"] %>
+      Station Name: <%= station.name %>
     </div>
     <div class = "address">
-      Street: <%= station["street_address"] %>
+      Street: <%= station.address %>
       City: <%= station["city"] %>
     </div>
     <div class = "fuel type">
-      Fuel Type: <%= station["fuel_type_code"] %>
+      Fuel Type: <%= station.fuel_type %>
     </div>
     <div class = "distance">
-      Distance: <%= station["distance"] %>
+      Distance: <%= station.distance %>
     </div>
     <div class = "access times">
-      Access Times: <%= station["access_days_time"] %>
+      Access Times: <%= station.access_times %>
     </div>
   </br>
     <% end %>
   </div>
 </div>
+
+<h1> <%= @facade.weather.description %></h1>

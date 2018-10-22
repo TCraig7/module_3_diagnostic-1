@@ -11,6 +11,8 @@ feature "User can make a search" do
     expect(current_path).to eq("/search")
     # Then I should be on page "/search"
     # Then I should see a list of the 10 closest stations within 6 miles sorted by distance
+    expect(page).to have_css(".station", count: 10)
+     #only electric and propane
     within(first(".station")) do
       expect(page).to have_css(".name")
       expect(page).to have_css(".address")
